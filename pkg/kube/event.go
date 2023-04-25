@@ -12,6 +12,7 @@ type EnhancedEvent struct {
 	corev1.Event   `json:",inline"`
 	ClusterName    string                  `json:"clusterName"`
 	InvolvedObject EnhancedObjectReference `json:"involvedObject"`
+	Timestamp      string                  `json:"@timestamp,omitempty"`
 }
 
 // DeDot replaces all dots in the labels and annotations with underscores. This is required for example in the
